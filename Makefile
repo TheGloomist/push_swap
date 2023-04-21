@@ -1,6 +1,6 @@
 NAME := push_swap
 CC   := gcc
-CCFLAGS := -Wall -Wextra -Werror -g -fsanitize=address
+CFLAGS := -Wall -Wextra -Werror -g -fsanitize=address
 LIBFT := ./LIBFT_folder
 
 HEADERS := -I ./include -I $(LIBFT)/include

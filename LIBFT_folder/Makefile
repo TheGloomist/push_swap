@@ -6,7 +6,7 @@
 #    By: izaitcev <izaitcev@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/04/30 14:54:38 by izaitcev      #+#    #+#                  #
-#    Updated: 2023/04/21 18:45:01 by izaitcev      ########   odam.nl          #
+#    Updated: 2023/04/21 23:37:14 by izaitcev      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,4 +34,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re isprintf
+.PHONY: all clean fclean re
