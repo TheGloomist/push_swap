@@ -6,13 +6,13 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/21 18:29:05 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/04/22 01:29:52 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/04/22 13:37:45 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void check_characters(char to_check, char sign_check)
+void	check_characters(char to_check, char sign_check)
 {
 	if (ft_isdigit(to_check) == 1)
 		return ;
@@ -21,7 +21,7 @@ void check_characters(char to_check, char sign_check)
 	else
 	{
 		ft_printf("Error\n");
-		exit(0);		
+		exit(0);
 	}
 }
 
@@ -51,8 +51,3 @@ void	parsing(t_data *d, int argc, char **argv)
 	for (int i = 0; i < argc - 1; i++)
 		printf("%d ", d->input[i]);
 }
-
-// TODO : 
-// [] - check for valid input
-// [] - convert to ints
-//

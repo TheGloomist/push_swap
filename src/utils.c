@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/22 01:20:25 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/04/22 01:28:26 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/04/22 13:39:02 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ps_atoi(const char *str)
 {
-	int		i;
-	long int		sign;
-	long int		conv;
+	int			i;
+	long int	sign;
+	long int	conv;
 
 	i = 0;
 	sign = 1;
@@ -29,10 +29,10 @@ int	ps_atoi(const char *str)
 	{
 		conv = (conv * 10) + (str[i] - '0');
 		if (conv * sign > INT_MAX || conv * sign < INT_MIN)
-			{
-				ft_printf("Error\n");
-				exit(0);
-			}
+		{
+			ft_printf("Error\n");
+			exit(0);
+		}
 		i++;
 	}
 	return ((int)conv * sign);
