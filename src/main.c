@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/15 15:54:08 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/04/22 13:35:01 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/04/22 14:59:45 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	main(int argc, char **argv)
 {
 	t_data	d;
+	int		i;
 
 	d.input = NULL;
 	if (argc < 2)

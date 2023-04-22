@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/15 15:53:58 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/04/22 13:40:29 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/04/22 14:20:46 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ typedef struct s_list
 
 typedef struct s_data
 {
-	int	*input;
+	int		*input;
+	t_list	*stack_a;
+	t_list	*stack_b;
 }	t_data;
 
 int		main(int argc, char **argv);
