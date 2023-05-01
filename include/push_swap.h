@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/15 15:53:58 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/04/22 14:20:46 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/04/28 19:40:19 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct s_data
 
 int		main(int argc, char **argv);
 void	parsing(t_data *d, int argc, char **argv);
-int		ps_atoi(const char *str);
+int		ps_atoi(const char *str, t_data *d);
+void	exit_and_free(t_data *d);
 
 #endif

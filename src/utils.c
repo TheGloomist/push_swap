@@ -6,13 +6,37 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/22 01:20:25 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/04/22 14:59:48 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/04/29 18:16:06 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ps_atoi(const char *str)
+void	free_linked_list(t_list *to_free)
+{
+	t_list	*temp;
+
+	while (to_free != NULL)
+	{
+		temp = to_free->next;
+		to_free->next = NULL;
+		to_free->previous = NULL;
+		free (to_free);
+		to_free = temp;
+	}
+}
+
+void	exit_and_free(t_data *d)
+{
+	free(d->input);
+	d->input = NULL;
+	free_linked_list(d->stack_a);
+	free_linked_list(d->stack_b);
+	ft_printf("Error\n");
+	exit (0);
+}
+
+int	ps_atoi(const char *str, t_data *d)
 {
 	int			i;
 	long int	sign;
@@ -29,10 +53,7 @@ int	ps_atoi(const char *str)
 	{
 		conv = (conv * 10) + (str[i] - '0');
 		if (conv * sign > INT_MAX || conv * sign < INT_MIN)
-		{
-			ft_printf("Error\n");
-			exit(0);
-		}
+			exit_and_free(d);
 		i++;
 	}
 	return ((int)conv * sign);

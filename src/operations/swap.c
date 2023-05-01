@@ -1,25 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   push.c                                             :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/04/15 15:54:08 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/04/28 20:28:52 by izaitcev      ########   odam.nl         */
+/*   Created: 2023/04/29 19:01:30 by izaitcev      #+#    #+#                 */
+/*   Updated: 2023/04/29 21:54:41 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// bzero will set everything in data struct to 0
-int	main(int argc, char **argv)
+// fuck dis
+void	swap_op(t_list **to_swap)
 {
-	t_data	d;
+	t_list	*first_el;
+	t_list	*second_el;
 
-	if (argc < 2)
-		return (0);
-	ft_bzero(&d, sizeof(t_data));
-	parsing(&d, argc, argv);
-	make_linked_list(&d, argc);
+	first_el = *to_swap;
+	second_el = first_el->next;
+	
+
+	
+
+}
+
+void	sa(t_data *d)
+{
+	swap_op(&d->stack_a);
+}
+
+void	sb(t_data *d)
+{
+	swap_op(&d->stack_b);
+}
+
+void	ss(t_data *d)
+{
+	swap_op(&d->stack_a);
+	swap_op(&d->stack_b);
 }
