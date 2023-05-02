@@ -6,17 +6,41 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/28 18:44:40 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/04/29 17:40:42 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/02 19:26:18 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list	*ps_lstnew(t_data *d, int content)
+int	ps_lstsize(t_link *lst)
 {
-	t_list	*new;
+	int	size;
 
-	new = (t_list *)malloc(sizeof(t_list));
+	size = 0;
+	while (lst)
+	{
+		size++;
+		lst = lst->next;
+	}
+	return (size);
+}
+
+t_link	*ps_lstlast(t_link *lst)
+{
+	while (lst)
+	{
+		if (!lst->next)
+			return (lst);
+		lst = lst->next;
+	}
+	return (NULL);
+}
+
+t_link	*ps_lstnew(t_data *d, int content)
+{
+	t_link	*new;
+
+	new = (t_link *)malloc(sizeof(t_link));
 	if (new == NULL)
 		exit_and_free(d);
 	new->content = content;
@@ -25,21 +49,21 @@ t_list	*ps_lstnew(t_data *d, int content)
 	return (new);
 }
 
-void	ps_lstadd_back(t_list **lst, t_list *new)
+void	ps_lstadd_back(t_link **lst, t_link *new)
 {
-	t_list	*last;
+	t_link	*last;
 
 	if (*lst == NULL)
 		*lst = new;
 	else
 	{
-		last = ft_lstlast(*lst);
+		last = ps_lstlast(*lst);
 		last->next = new;
 		new->previous = last;
 	}
 }
 
-void	make_linked_lists(t_data *d, int argc)
+void	make_linked_list(t_data *d, int argc)
 {
 	int	i;
 

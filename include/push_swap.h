@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/15 15:53:58 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/04/28 19:40:19 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/02 19:25:56 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,38 @@
 # include <limits.h>
 # include "libft.h"
 
-typedef struct s_list
+typedef struct s_link
 {
 	int				content;
-	struct s_list	*next;
-	struct s_list	*previous;
-}	t_list;
+	struct s_link	*next;
+	struct s_link	*previous;
+}	t_link;
 
 typedef struct s_data
 {
 	int		*input;
-	t_list	*stack_a;
-	t_list	*stack_b;
+	t_link	*stack_a;
+	t_link	*stack_b;
 }	t_data;
 
 int		main(int argc, char **argv);
 void	parsing(t_data *d, int argc, char **argv);
 int		ps_atoi(const char *str, t_data *d);
 void	exit_and_free(t_data *d);
+void	make_linked_list(t_data *d, int argc);
+t_link	*ps_lstlast(t_link *lst);
+int		ps_lstsize(t_link *lst);
+void	pa(t_data *d);
+void	pb(t_data *d);
+void	sa(t_data *d);
+void	sb(t_data *d);
+void	sb(t_data *d);
+void	ra(t_data *d);
+void	rb(t_data *d);
+void	rr(t_data *d);
+void	rra(t_data *d);
+void	rrb(t_data *d);
+void	rrr(t_data *d);
+void	swap_op(t_link **to_swap);
 
 #endif

@@ -6,15 +6,15 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/22 01:20:25 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/04/29 18:16:06 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/02 19:05:25 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	free_linked_list(t_list *to_free)
+void	free_linked_list(t_link *to_free)
 {
-	t_list	*temp;
+	t_link	*temp;
 
 	while (to_free != NULL)
 	{

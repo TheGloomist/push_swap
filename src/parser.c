@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/21 18:29:05 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/04/28 19:40:44 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/02 19:29:43 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	parsing(t_data *d, int argc, char **argv)
 		x = 0;
 		while (argv[1 + y][x] != '\0')
 		{
-			check_characters(argv[1 + y][x], argv[1 + y][x + 1], d);
+			check_characters(d, argv[1 + y][x], argv[1 + y][x + 1]);
 			x++;
 		}
 		y++;
