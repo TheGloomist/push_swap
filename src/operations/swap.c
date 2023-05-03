@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/29 19:01:30 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/05/02 19:28:21 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/03 15:27:24 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,16 @@ void	swap_op(t_link **to_swap)
 	t_link	*third_element;
 
 	moves_down = *to_swap;
-	if (moves_down == NULL)
+	if (moves_down == NULL || moves_down->next == NULL)
 		return ;
 	moves_up = moves_down->next;
 	third_element = moves_up->next;	
-	if (moves_up != NULL)
-	{
-		moves_up->previous = NULL;
-		moves_up->next = moves_down;
-		moves_down->previous = moves_up;
-	}
+	moves_up->previous = NULL;
+	moves_up->next = moves_down;
+	moves_down->previous = moves_up;
+	moves_down->next = third_element;
 	if (third_element != NULL)
-	{
-		moves_down->next = third_element;
 		third_element->previous = moves_down;
-	}
 	(*to_swap) = moves_up;
 }
 

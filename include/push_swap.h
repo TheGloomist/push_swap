@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/15 15:53:58 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/05/02 19:25:56 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/03 15:18:39 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,10 @@ void	rra(t_data *d);
 void	rrb(t_data *d);
 void	rrr(t_data *d);
 void	swap_op(t_link **to_swap);
+
+// things below are for testing only, REMOVE before handing in
+
+void	print_link(t_link *to_print);
+void	test_operations(t_data *d);
 
 #endif
