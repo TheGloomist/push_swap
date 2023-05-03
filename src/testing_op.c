@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/03 15:03:49 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/05/03 15:22:06 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/03 16:10:28 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 void	test_operations(t_data *d)
 {	
-	// pb(d);
-	sa(d);
+	rra(d);
 }
 
 void	print_link(t_link *to_print)
