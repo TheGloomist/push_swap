@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/21 18:29:05 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/05/03 19:09:55 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/03 19:38:10 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,15 @@ void	sort_copy(t_data *d, int argc)
 void	copy_input(t_data *d, int argc)
 {
 	int	i;
-	int	j;
 
 	d->sorted_input = (int *)malloc(sizeof(int) * (argc - 1));
 	if (d->sorted_input == NULL)
 		exit_and_free(d);
 	i = 0;
-	j = 0;
-	while (d->sorted_input[i] <= d->sorted_input[j])
+	while (i < (argc - 1))
 		{
-			d->sorted_input[i] = d->sorted_input[j];
+			d->sorted_input[i] = d->input[i];
 			i++;
-			j++;
 		}
 }
 
@@ -107,7 +104,6 @@ void	parsing(t_data *d, int argc, char **argv)
 		d->input[y] = ps_atoi(argv[1 + y], d);
 		y++;
 	}
-	translate_input(d, argc);
 	for (int i = 0; i < argc - 1; i++)
 		printf("%d ", d->input[i]);
 }

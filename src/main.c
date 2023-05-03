@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/15 15:54:08 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/05/03 15:18:18 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/03 19:34:03 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int	main(int argc, char **argv)
 		return (0);
 	ft_bzero(&d, sizeof(t_data));
 	parsing(&d, argc, argv);
+	translate_input(&d, argc);
 	make_linked_list(&d, argc);
+	
 	// for testing
 	printf("Start Stack a: ");
 	print_link(d.stack_a);

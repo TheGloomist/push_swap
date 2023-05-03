@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/15 15:53:58 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/05/03 16:50:20 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/03 19:34:59 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int		main(int argc, char **argv);
 void	parsing(t_data *d, int argc, char **argv);
 int		ps_atoi(const char *str, t_data *d);
 void	exit_and_free(t_data *d);
+void	translate_input(t_data *d, int argc);
 void	make_linked_list(t_data *d, int argc);
 t_link	*ps_lstlast(t_link *lst);
 int		ps_lstsize(t_link *lst);
