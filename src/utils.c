@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/22 01:20:25 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/05/02 19:05:25 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/03 18:51:51 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void	exit_and_free(t_data *d)
 {
 	free(d->input);
 	d->input = NULL;
+	free(d->sorted_input);
+	d->sorted_input = NULL;
 	free_linked_list(d->stack_a);
 	free_linked_list(d->stack_b);
 	ft_printf("Error\n");

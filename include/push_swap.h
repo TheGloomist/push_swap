@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/15 15:53:58 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/05/03 15:18:39 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/03 16:50:20 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_link
 typedef struct s_data
 {
 	int		*input;
+	int		*sorted_input;
 	t_link	*stack_a;
 	t_link	*stack_b;
 }	t_data;
