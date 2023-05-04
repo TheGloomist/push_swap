@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/29 21:56:32 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/05/03 15:36:40 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/04 13:51:06 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	px(t_link **push_from, t_link **push_to)
 	if (*push_to != NULL)
 		(*push_to)->previous = to_move;
 	*push_from = new_top;
-	to_move->next = *push_to;	
-	*push_to = to_move;	
+	to_move->next = *push_to;
+	*push_to = to_move;
 }
 
 void	pa(t_data *d)

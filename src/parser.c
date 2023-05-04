@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/21 18:29:05 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/05/03 19:38:10 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/04 13:48:36 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@ void	copy_input(t_data *d, int argc)
 		exit_and_free(d);
 	i = 0;
 	while (i < (argc - 1))
-		{
-			d->sorted_input[i] = d->input[i];
-			i++;
-		}
+	{
+		d->sorted_input[i] = d->input[i];
+		i++;
+	}
 }
 
 void	translate_input(t_data *d, int argc)
