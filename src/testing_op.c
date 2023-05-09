@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/03 15:03:49 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/05/03 16:10:28 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/09 19:50:04 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,14 @@
 
 void	test_operations(t_data *d)
 {	
-	rra(d);
+	int threshhold;
+
+	threshhold = 60;
+	// rra(d);
+	if (ps_lstsize(d->stack_a) > threshhold)
+		ft_radix_sort(d);
+	else
+		short_sort(d);
 }
 
 void	print_link(t_link *to_print)

@@ -6,13 +6,13 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/02 17:46:22 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/05/04 13:51:41 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/09 19:24:32 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rotate_op(t_link **to_rotate)
+int	rotate_op(t_link **to_rotate)
 {
 	t_link	*moves_down;
 	t_link	*new_head;
@@ -28,20 +28,32 @@ void	rotate_op(t_link **to_rotate)
 	new_head->previous = NULL;
 	second_to_last->next = moves_down;
 	(*to_rotate) = new_head;
+	return(1);
 }
 
 void	ra(t_data *d)
 {
-	rotate_op(&d->stack_a);
+	if (rotate_op(&d->stack_a) == 1)
+	ft_printf("ra\n");
 }
 
 void	rb(t_data *d)
 {
-	rotate_op(&d->stack_b);
+	if (rotate_op(&d->stack_b) == 1)
+	ft_printf("rb\n");
 }
 
 void	rr(t_data *d)
 {
-	rotate_op(&d->stack_a);
-	rotate_op(&d->stack_b);
+	int ra;
+	int rb;
+
+	ra = rotate_op(&d->stack_a);
+	rb = rotate_op(&d->stack_b);
+	if (ra == 1 && rb == 1)
+		ft_printf("rr\n");
+	else if (ra == 1)
+		ft_printf("ra\n");
+	else if (rb == 1)
+		ft_printf("rb\n");
 }

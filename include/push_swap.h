@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/15 15:53:58 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/05/03 19:34:59 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/09 19:33:37 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 # include <stdlib.h>
 # include <limits.h>
+# include <stdbool.h>
 # include "libft.h"
 
 typedef struct s_link
@@ -50,7 +51,8 @@ void	rr(t_data *d);
 void	rra(t_data *d);
 void	rrb(t_data *d);
 void	rrr(t_data *d);
-void	swap_op(t_link **to_swap);
+int		swap_op(t_link **to_swap);
+void	ft_radix_sort(t_data *d);
 
 // things below are for testing only, REMOVE before handing in
 
