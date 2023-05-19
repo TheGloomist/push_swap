@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/15 15:53:58 by izaitcev      #+#    #+#                 */
-/*   Updated: 2023/05/09 19:33:37 by izaitcev      ########   odam.nl         */
+/*   Updated: 2023/05/19 15:23:20 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ void	rrb(t_data *d);
 void	rrr(t_data *d);
 int		swap_op(t_link **to_swap);
 void	ft_radix_sort(t_data *d);
+void	short_sort(t_data *d);
+bool	is_sorted(t_data *d);
 
 // things below are for testing only, REMOVE before handing in
 

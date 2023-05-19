@@ -35,7 +35,6 @@ void	ft_radix_sort(t_data *d)
 
 	max_number = ps_lstsize(d->stack_a) - 1;
 	max_bits = 1;
-	// while(max_number / (2 * max_bits) != 0)
 	while (max_number >> max_bits != 0)
 		max_bits++;
 	i = 0;
