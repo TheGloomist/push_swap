@@ -72,6 +72,24 @@ void	sort_three(t_data *d)
 	mid = d->stack_a->next->content;
 	bot = d->stack_a->next->next->content;
 
+	if (top < mid && mid > bot && top < bot)
+	{
+		rra(d);
+		sa(d);
+	}
+	else if (top > mid && mid < bot && top < bot)
+		sa(d);
+	else if (top < mid && mid > bot && top > bot)
+		rra(d);
+	else if (top > mid && mid < bot && top > bot)
+		ra(d);
+	else if (top > mid && mid > bot && top > bot)
+		{
+			ra(d);
+			sa(d);
+		}
+}
+
 	// if (d->stack_a->content == 0)
 	// {
 	// 	rra(d);
@@ -94,7 +112,6 @@ void	sort_three(t_data *d)
 	// 		rra(d);
 	// 	}
 	// }
-}
 
 void	sorting(t_data *d)
 {
