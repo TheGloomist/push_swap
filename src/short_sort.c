@@ -14,24 +14,26 @@
 
 // TODO: change this function to return actual lowest number
 //       instead of looking for 0
-int	find_lowest_nbr(t_data *d,t_link **stack, int stack_size)
+int	find_lowest_nbr(t_link **stack, int stack_size)
 {
 	int		i;
 	int		lowest_num;
-	t_link	*temp;
+	int		lowest_num_pos;
 
 	i = 0;
-	lowest_num = 0;
-	temp = d->stack_a;
+	lowest_num = (*stack)->content;
+	lowest_num_pos = 0;
 	while (i < stack_size)
 	{
-		if(temp->content < temp)
+		if((*stack)->content < lowest_num)
 		{
-			i++;
-			temp = temp->next;
+			lowest_num = (*stack)->content;
+			lowest_num_pos = i;
 		}
+		i++;
+		*stack = (*stack)->content;
 	}
-	return (lowest_num);
+	return (lowest_num_pos);
 }
 
 void	sort_rest(t_data *d)
@@ -41,7 +43,7 @@ void	sort_rest(t_data *d)
 	int	i;
 
 	stack_size = ps_lstsize(d->stack_a);
-	lowest_nbr_i = find_lowest_nbr(d, d->stack_a, stack_size);
+	lowest_nbr_i = find_lowest_nbr(d->stack_a, stack_size);
 	i = 0;
 	if (lowest_nbr_i >= (stack_size / 2))
 	{
