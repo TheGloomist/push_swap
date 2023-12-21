@@ -55,12 +55,13 @@ void	sort_rest(t_data *d)
 	}
 	if (lowest_nbr_i < (stack_size / 2))
 	{
-		while (lowest_nbr_i )
-
+		while (lowest_nbr_i > 0)
+		{
+			ra(d);
+			lowest_nbr_i--;
+		}
 	}
-
-	
-
+	pb(d);
 }
 
 // TODO : change sorting 3 elements to work with any number
